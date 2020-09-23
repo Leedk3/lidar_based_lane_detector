@@ -1,0 +1,16 @@
+<!-- -->
+<launch>
+  <!-- <arg name="steering_ratio" default="1.0"/>
+  <arg name="wheel_base" default="0.78"/>
+  <arg name="look_ahead_distance" default="4"/>
+  <arg name="waypoint_step" default="1.0"/>
+  <arg name="direct_wheel_control" default="true"/> -->
+
+  <node pkg="lidar_based_lane_detector" type="lidar_based_lane_detector_node" name="lidar_based_lane_detector_node" output="screen">
+    <!-- <param name="steering_ratio" value="$(arg steering_ratio)"/>
+    <param name="wheel_base" value="$(arg wheel_base)"/>
+    <param name="look_ahead_distance" value="$(arg look_ahead_distance)"/>
+    <param name="waypoint_step" value="$(arg waypoint_step)"/>
+    <param name="direct_wheel_control" value="$(arg direct_wheel_control)"/> -->
+  </node>
+</launch>
