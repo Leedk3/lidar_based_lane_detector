@@ -61,10 +61,12 @@ public:
   ~LaneDetector();
   void run();
   void CallbackLaserCloud(const sensor_msgs::PointCloud2ConstPtr &msg);
-  void GroudAreaFiltering();
 
 private:
   void init();
+  void GroudAreaFiltering();
+  void calculateSmoothness();
+  void calculateCloudRange();
 
 private:
   ros::NodeHandle nh_;
@@ -84,7 +86,7 @@ private:
   double m_ego_shape_rear;
   double m_ego_shape_side;
   double m_groud_height_threshold;
-
-
+  float* m_CloudRange;
+  float* m_CloudIntensity;
 };
 #endif  // LIDAR_BASED_LANE_DETECTOR_H
